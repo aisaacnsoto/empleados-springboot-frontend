@@ -1,0 +1,30 @@
+<form [formGroup]="formGroup" (ngSubmit)="save()">
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre" type="text">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Apellidos</mat-label>
+            <input matInput formControlName="apellido" type="text">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>DNI</mat-label>
+            <input matInput formControlName="dni" type="number">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" type="email">
+        </mat-form-field>
+    </p>
+    <p>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!formGroup.valid">Guardar</button>
+        <a mat-raised-button color="secondary" routerLink="/" class="btn btn-secondary">Cancelar</a>
+    </p>
+</form>
